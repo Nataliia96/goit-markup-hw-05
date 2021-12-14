@@ -273,6 +273,31 @@ a > .accent {
   justify-content: space-between;
   margin: 0;
 }
+.projects-list .item {
+  position: relative;
+}
+.projects-list-decription {
+  position: absolute;
+  bottom: 0;
+
+  width: 370px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  background-color: rgba(47, 48, 58, 0.8);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--white);
+}
 /* Наша команда */
 .team-members {
   display: flex;
@@ -440,7 +465,6 @@ a > .accent {
   margin-top: var(--portfolio-card-margin);
   margin-left: var(--portfolio-card-margin);
 }
-.portfolio-list > .item:hover,
 .portfolio-list > .item:hover {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06),
     0 1px 1px rgba(0, 0, 0, 0.12);
@@ -471,6 +495,40 @@ a > .accent {
 .portfolio-list-content {
   padding: 20px 24px;
   border: 1px solid rgba(238, 238, 238, 1);
+}
+.portfolio-thumb {
+  position: relative;
+}
+.portfolio-list > .item:hover .portfolio-thumb::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+}
+.card-text {
+  position: absolute;
+  top: 0;
+
+  padding: 63px 24px;
+
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--white);
+  /* overflow: auto; */
+
+  opacity: 0;
+}
+.portfolio-list > .item:hover .card-text {
+  opacity: 1;
 }
 
 /* ФУТЕР */
