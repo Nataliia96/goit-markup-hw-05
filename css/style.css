@@ -16,6 +16,7 @@
   --fotter-contacts-color: rgba(255, 255, 255, 0.6);
   --hero-background-shadow: rgba(47, 48, 58, 0, 4);
   --icons-primary-color: rgba(175, 177, 184, 1);
+  --transition-cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -109,6 +110,7 @@ a > .accent {
   letter-spacing: 0.02em;
   text-decoration: none;
   list-style: none;
+  transition: color 250ms var(--transition-cubic);
 }
 .contacts-link {
   display: flex;
@@ -122,6 +124,8 @@ a > .accent {
   letter-spacing: 0.02em;
   text-decoration: none;
   list-style: none;
+
+  transition: color 250ms var(--transition-cubic);
 }
 .icon-mail,
 .icon-phone-number {
@@ -150,7 +154,7 @@ a > .accent {
   content: "";
 
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
 
   display: block;
   width: 100%;
@@ -192,6 +196,7 @@ a > .accent {
   text-align: center;
 
   cursor: pointer;
+  transition: background-color 250ms var(--transition-cubic);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -356,10 +361,13 @@ a > .accent {
   align-items: center;
 
   border-radius: 50%;
+
+  transition: background-color 250ms var(--transition-cubic);
 }
 
 .socials-icon {
   fill: var(--icons-primary-color);
+  transition: fill 250ms var(--transition-cubic);
 }
 .socials .link:hover .socials-icon,
 .socials .link:focus .socials-icon {
@@ -386,21 +394,15 @@ a > .accent {
   max-height: 60px;
 
   fill: var(--icons-primary-color);
+  transition: fill var(--transition-cubic) 250ms;
 }
 .clients-list .link:hover .clients-icon,
 .clients-list .link:focus .clients-icon {
   fill: var(--accent-color);
 }
-.clients-list .link:hover,
-.clients-list .link:focus {
-  border: 1px solid var(--accent-color);
-}
 .clients-list .item {
   width: 170px;
   height: 92px;
-
-  border: 1px solid var(--icons-primary-color);
-  border-radius: 4px;
 }
 .clients-list .link {
   display: flex;
@@ -409,6 +411,14 @@ a > .accent {
 
   justify-content: center;
   align-items: center;
+  border: 1px solid var(--icons-primary-color);
+  border-radius: 4px;
+
+  transition: border var(--transition-cubic) 250ms;
+}
+.clients-list .link:hover,
+.clients-list .link:focus {
+  border: 1px solid var(--accent-color);
 }
 
 /* Фильтры в Портфолио */
@@ -440,6 +450,9 @@ a > .accent {
   letter-spacing: 0.03em;
 
   cursor: pointer;
+  transition: background-color 250ms var(--transition-cubic),
+    color 250ms var(--transition-cubic),
+    box-shadow 250ms var(--transition-cubic);
 }
 .filter-list > .item:not(:last-child) {
   margin-right: 8px;
@@ -465,7 +478,15 @@ a > .accent {
   margin-top: var(--portfolio-card-margin);
   margin-left: var(--portfolio-card-margin);
 }
-.portfolio-list > .item:hover {
+.portfolio-list-link {
+  text-decoration: none;
+  transition: box-shadow var(--transition-cubic) 250ms;
+}
+.portfolio-list-link:hover,
+.portfolio-list-link:focus {
+  display: block;
+  width: 100%;
+  height: 100%;
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06),
     0 1px 1px rgba(0, 0, 0, 0.12);
 }
@@ -481,9 +502,7 @@ a > .accent {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.portfolio-list-link {
-  text-decoration: none;
-}
+
 .portfolio-list-type {
   margin-top: 0;
 
@@ -498,16 +517,27 @@ a > .accent {
 }
 .portfolio-thumb {
   position: relative;
+  overflow: hidden;
 }
-.portfolio-list > .item:hover .portfolio-thumb::before {
-  content: "";
-
+.card-text-overlay {
   position: absolute;
-  top: 0;
+  bottom: 0;
+
+  transform: translateY(101%);
 
   width: 100%;
   height: 100%;
   background-color: rgba(33, 150, 243, 0.9);
+
+  transition: transform var(--transition-cubic) 250ms;
+}
+.portfolio-list-link:hover .card-text-overlay,
+.portfolio-list-link:focus .card-text-overlay {
+  position: absolute;
+
+  transform: translateY(0);
+  top: 0;
+  z-index: 1;
 }
 .card-text {
   position: absolute;
@@ -524,11 +554,6 @@ a > .accent {
   letter-spacing: 0.03em;
   color: var(--white);
   /* overflow: auto; */
-
-  opacity: 0;
-}
-.portfolio-list > .item:hover .card-text {
-  opacity: 1;
 }
 
 /* ФУТЕР */
@@ -565,6 +590,8 @@ address {
   text-decoration: none;
   list-style: none;
   color: var(--fotter-contacts-color);
+
+  transition: color 250ms var(--transition-cubic);
 }
 .footer-data {
   padding-top: 60px;
