@@ -41,7 +41,6 @@ p {
 img {
   display: block;
 }
-
 /* ПАДДИНГИ В СЕКЦИЯХ */
 .section {
   padding: 94px 0;
@@ -95,11 +94,9 @@ a > .accent {
 .contacts .item:not(:last-child) {
   margin-right: 50px;
 }
-
 .site-nav .item {
   position: relative;
 }
-
 .site-nav .link {
   padding: 32px 0;
   display: block;
@@ -170,6 +167,31 @@ a > .accent {
   background-color: var(--accent-color);
   border-radius: 2px;
 }
+.icon-box {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+.icon-decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: rgb(12, 129, 16);
+}
+.icon-lights {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  animation-name: fillChg;
+  animation-duration: 1500ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
 /*Герой*/
 .hero-content {
   text-align: center;
@@ -225,7 +247,6 @@ a > .accent {
     url(../images/background.jpg);
 }
 /*Особенности*/
-
 .features-icons-wrapper {
   width: 270px;
   height: 120px;
@@ -251,7 +272,6 @@ a > .accent {
 .features.container > .item:not(:last-child) {
   margin-right: 30px;
 }
-
 .features-title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -265,7 +285,6 @@ a > .accent {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
-
 /* Заголовки секций */
 .projects-section-title,
 .team-section-title,
@@ -371,7 +390,6 @@ a > .accent {
 
   transition: background-color 250ms var(--transition-cubic);
 }
-
 .socials-icon {
   fill: var(--icons-primary-color);
   transition: fill 250ms var(--transition-cubic);
@@ -386,9 +404,7 @@ a > .accent {
 .socials .link:focus {
   background-color: var(--accent-color);
 }
-
 /* Секция наши клиенты */
-
 .clients-list {
   margin: 0;
   padding: 0;
@@ -497,7 +513,6 @@ a > .accent {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0 4px 4px rgba(0, 0, 0, 0.06),
     0 1px 1px rgba(0, 0, 0, 0.12);
 }
-
 .img {
   max-width: 100%;
 }
@@ -509,7 +524,6 @@ a > .accent {
   line-height: 2;
   letter-spacing: 0.06em;
 }
-
 .portfolio-list-type {
   margin-top: 0;
 
@@ -696,4 +710,18 @@ address {
 .btn-modal-close:hover,
 .btn-modal-close:focus {
   border: 1px solid rgba(33, 33, 33, 0.8);
+}
+@keyframes fillChg {
+  0% {
+    fill: rgb(224, 7, 159);
+  }
+  25% {
+    fill: rgb(48, 5, 240);
+  }
+  50% {
+    fill: rgb(240, 7, 7);
+  }
+  100% {
+    fill: rgb(250, 149, 17);
+  }
 }
