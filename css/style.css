@@ -21,6 +21,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: var(--primary-text-color);
+  padding-top: 80px;
 }
 li {
   list-style: none;
@@ -142,10 +143,16 @@ a > .accent {
   color: var(--accent-color);
 }
 .header-section {
-  max-width: 1600px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  width: 1600px;
   margin-left: auto;
   margin-right: auto;
 
+  background-color: var(--white);
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: rgba(236, 236, 236, 1);
