@@ -21,6 +21,7 @@
 body {
   font-family: "Roboto", sans-serif;
   color: var(--primary-text-color);
+  padding-top: 80px;
 }
 li {
   list-style: none;
