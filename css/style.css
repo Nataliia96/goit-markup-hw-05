@@ -560,7 +560,7 @@ a > .accent {
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--white);
-  /* overflow: auto; */
+  overflow: auto;
 }
 
 /* ФУТЕР */
