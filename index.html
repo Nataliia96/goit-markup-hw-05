@@ -332,6 +332,20 @@
             <use href="./images/icons.svg#icon-close-modal"></use>
         </svg>
     </button>
+    <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+    <form class="modal-box">
+        <label class="modal-input-description" for="username">Имя</label>
+        <input class="modal-input" id="username" name="username" type="text">
+        <label class="modal-input-description" for="phone">Телефон</label>
+        <input class="modal-input" id="phone" name="phone" type="tel">
+        <label class="modal-input-description" for="email">Почта</label>
+        <input class="modal-input" id="email" name="email" type="email">
+        <label class="modal-input-description" for="comment">Комментарий</label>
+        <textarea class="modal-comment" id="comment" placeholder="Введите текст" name="comment"></textarea>
+        <label class="modal-checkbox-text" for="confirmation-conditions"></label>
+        <input class="confirmation-conditions-checkbox" type="checkbox" id="confirmation-conditions-checkbox" name="confirmation-conditions-checkbox">
+        <button type="button" class="modal-confirmation-btn">Отправить</button>
+    </form>
     </div>
 </div>
 <script src="./js/modal.js"></script>

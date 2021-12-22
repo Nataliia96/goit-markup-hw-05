@@ -674,6 +674,7 @@ address {
 
   width: 528px;
   height: 581px;
+  padding: 40px;
 
   background-color: var(--white);
   border-radius: 4px;
@@ -685,6 +686,61 @@ address {
 }
 .backdrop.is-hidden .modal {
   transform: scale(3);
+}
+.modal-title {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: rgb(33, 33, 33);
+}
+.modal-input-description,
+.modal-input {
+  width: 100%;
+}
+.modal-input-description {
+  display: block;
+
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+.modal-input {
+  padding: 12px;
+  margin-bottom: 10px;
+}
+.modal-comment {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  resize: none;
+}
+.modal-confirmation-btn {
+  width: 200px;
+  height: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  background-color: var(--accent-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.confirmation-conditions-checkbox {
+  display: block;
 }
 .btn-modal-close {
   position: absolute;
@@ -710,6 +766,8 @@ address {
 .btn-modal-close:focus {
   border: 1px solid rgba(33, 33, 33, 0.8);
 }
+
+/* Анимации */
 @keyframes fillChg {
   0% {
     fill: rgb(224, 7, 159);
