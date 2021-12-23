@@ -697,11 +697,11 @@ address {
   letter-spacing: 0.03em;
   color: rgb(33, 33, 33);
 }
-.modal-input-description,
-.modal-input {
+.form-input-field,
+.form-input {
   width: 100%;
 }
-.modal-input-description {
+.form-input-field {
   display: block;
 
   font-size: 12px;
@@ -709,11 +709,11 @@ address {
   letter-spacing: 0.01em;
   margin-bottom: 4px;
 }
-.modal-input {
+.form-input {
   padding: 12px;
   margin-bottom: 10px;
 }
-.modal-comment {
+.form-comment {
   display: block;
   width: 100%;
   min-height: 120px;
