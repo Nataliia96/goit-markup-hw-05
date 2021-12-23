@@ -334,22 +334,44 @@
     </button>
     <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
     <form class="form-box">
-        <label class="form-input-field" for="username">Имя</label>
+       <fieldset class="form-field-wrapper">
+            <label class="form-input-field" for="username">Имя</label>
         <input class="form-input" id="username" name="username" type="text">
+        <svg class="form-icon" width="18px" height="18px">
+            <use href="./images/icons.svg#icon-person-black"></use>
+        </svg>
+        </fieldset>
 
+        <fieldset class="form-field-wrapper">
         <label class="form-input-field" for="phone">Телефон</label>
         <input class="form-input" id="phone" name="phone" type="tel">
+        <svg class="form-icon" width="18px" height="18px">
+            <use href="./images/icons.svg#icon-phone-black"></use>
+        </svg>
+        </fieldset>
 
+        <fieldset class="form-field-wrapper">
         <label class="form-input-field" for="email">Почта</label>
         <input class="form-input" id="email" name="email" type="email">
+        <svg class="form-icon" width="18px" height="18px">
+            <use href="./images/icons.svg#icon-email-black"></use>
+        </svg>
+        </fieldset>
 
+        <fieldset class="form-comment-wrapper">
         <label class="form-input-field" for="comment">Комментарий</label>
         <textarea class="form-comment" id="comment" placeholder="Введите текст" name="comment"></textarea>
+        </fieldset>
 
+        <fieldset class="form-checkbox-wrapper">
         <label class="form-checkbox-text" for="confirmation-checkbox"></label>
         <input class="confirmation-checkbox" type="checkbox" id="confirmation-checkbox" name="confirmation-checkbox">
+        <svg class="form-check-mark" width="18px" height="18px">
+            <use href="./images/icons.svg#icon-check"></use>
+        </svg>
+        </fieldset>
 
-        <button type="button" class="modal-confirmation-btn">Отправить</button>
+        <button type="submit" class="modal-confirmation-btn">Отправить</button>
     </form>
     </div>
 </div>
