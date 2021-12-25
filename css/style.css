@@ -635,16 +635,80 @@ address {
 .footer-socials-icon {
   fill: var(--white);
 }
-
 .footer-socials .link {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .footer-flex {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
 }
 .footer-contacts-wrapper {
   margin-right: 70px;
+}
+.form-subscription-box {
+  margin-left: 93px;
+}
+.form-subscription {
+  position: relative;
+  display: flex;
+}
+.form-subscription-title {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.form-subscription-label {
+  display: block;
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+}
+.form-subscription-email {
+  display: block;
+  width: inherit;
+  height: inherit;
+  padding: 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+}
+.form-subscription-email::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.form-subscription-btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  padding: 10px 29px;
+
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  text-align: left;
+  cursor: pointer;
+}
+.subscription-btn-icon {
+  position: absolute;
+  right: 28px;
+  top: 13px;
 }
 /* Оформление модального окна */
 .backdrop {
@@ -742,7 +806,6 @@ address {
   padding: 0;
   border-width: 0;
 }
-
 .form-field-wrapper {
   margin: 0 0 10px 0;
 }
@@ -759,7 +822,6 @@ address {
 
   margin: 0 0 30px 0;
 }
-
 .form-check-mark {
   position: absolute;
   top: -70%;
@@ -777,7 +839,6 @@ address {
 .terms-link {
   color: var(--accent-color);
 }
-
 .confirmation-checkbox {
   position: absolute;
   top: 4px;
@@ -812,7 +873,6 @@ address {
   border: 1px solid var(--accent-color);
   outline: none;
 }
-
 .modal-confirmation-btn {
   width: 200px;
   height: 50px;
@@ -837,9 +897,6 @@ address {
 .modal-confirmation-btn:hover,
 .modal-confirmation-btn:focus {
   background-color: var(--hover-btn-color);
-}
-.confirmation-conditions-checkbox {
-  display: block;
 }
 .btn-modal-close {
   position: absolute;
