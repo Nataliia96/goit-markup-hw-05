@@ -715,10 +715,29 @@ address {
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(33, 33, 33, 0.2);
+
+  transition: border 250ms var(--transition-cubic);
+}
+.form-comment {
+  display: block;
+  width: 100%;
+  min-height: 120px;
+  padding: 12px 16px;
+  resize: none;
+
+  border-radius: 4px;
+  border: 1px solid rgba(63, 32, 32, 0.2);
+
+  transition: border 250ms var(--transition-cubic);
+}
+.form-comment::placeholder {
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 .form-field-wrapper,
-.form-comment-wrapper,
-.form-checkbox-wrapper {
+.form-comment-wrapper {
   position: relative;
   padding: 0;
   border-width: 0;
@@ -731,29 +750,59 @@ address {
   margin: 0 0 20px 0;
 }
 .form-checkbox-wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+
   margin: 0 0 30px 0;
 }
-.form-comment {
-  display: block;
-  width: 100%;
-  min-height: 120px;
-  padding: 12px 16px;
-  resize: none;
 
-  border-radius: 4px;
-  border: 1px solid rgba(63, 32, 32, 0.2);
+.form-check-mark {
+  position: absolute;
+  top: -70%;
+  left: 10px;
+  opacity: 0;
 }
-.form-comment::placeholder {
+.form-checkbox-text {
+  margin-left: 8px;
+
   font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+.terms-link {
+  color: var(--accent-color);
+}
+
+.confirmation-checkbox {
+  position: absolute;
+  top: 4px;
+  left: 12px;
+
+  width: 16px;
+  height: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.confirmation-checkbox:checked ~ .form-check-mark {
+  fill: var(--white);
+  top: 4px;
+  left: 12px;
+  background-color: var(--accent-color);
+  opacity: 1;
 }
 .form-icon {
   position: absolute;
   top: 38px;
   left: 12px;
   transform: translateY(-50%);
+
+  transition: fill 250ms var(--transition-cubic);
 }
 .form-field-wrapper:focus-within .form-icon {
   fill: var(--accent-color);
@@ -782,6 +831,12 @@ address {
   border-radius: 4px;
   cursor: pointer;
   border-width: 0;
+
+  transition: background-color 250ms var(--transition-cubic);
+}
+.modal-confirmation-btn:hover,
+.modal-confirmation-btn:focus {
+  background-color: var(--hover-btn-color);
 }
 .confirmation-conditions-checkbox {
   display: block;
